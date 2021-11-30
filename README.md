@@ -1,4 +1,4 @@
-# SalamDariBinjai.gq
-Repository of SalamDariBinjai.gq
+# SalamDariBinjaiGames.gq
+Repository of SalamDariBinjaiGames.gq
 Want To Play?
-https://SalamDariBinjai.gq
+https://SalamDariBinjaiGames.gq
