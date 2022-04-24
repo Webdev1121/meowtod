@@ -54,16 +54,19 @@ if (getName === null || !isNaN(getName)){
     alert ("meowbahh will reload the web at "+interval/1000+" seconds"); 	
 }
 
-window.addEventListener('beforeunload', function (e) {
-    e.preventDefault();
-    e.returnValue = 'Developer : gw bantuin buat lawan meowbahh';
-    setTimeout(function () { // Timeout to wait for user response
-        setTimeout(function () { // Timeout to wait onunload, if not fired then this will be executed
-            console.log('User stayed on the page.');
-    }, 50)}, 50);
-    return 'Developer : gw bantuin buat lawan meowbahh';
-});
 
+	// Event listener for the 'beforeunload' event
+window.addEventListener('beforeunload', function (e) {
+
+    // Check if any of the input fields are filled
+    if (fname !== '' || lname !== '' || subject !== '') {
+
+        // Cancel the event and show alert that
+        // the unsaved changes would be lost
+        e.preventDefault();
+        e.returnValue = '';
+    }
+});
 
 </script>
 </b></h4>
