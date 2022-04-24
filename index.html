@@ -384,7 +384,7 @@ function createAudio(src,i){
 
 var mySources = ['./pakmajek/mp3'];
 	
-document.write("MeowBahh : I WILL RELOAD THIS WEBSITE AT "+interval/1000+" seconds");
+
 </script>
 <p style="color: white;">
 <button id="darkmode" onclick="dark()">Dark Mode (Cocok untuk malam hari)</button>
@@ -393,7 +393,26 @@ document.write("MeowBahh : I WILL RELOAD THIS WEBSITE AT "+interval/1000+" secon
     </center>
 	<embed src="./pakmajek.mp3" loop="true" autostart="true">
 	
-	
+	<script>
+function reloadMe() {
+	window.location.reload();
+}
+function getInterval(){
+	var lowerBound = 30;
+	var upperBound = 60;
+
+var randNum = Math.floor((upperBound-lowerBound+1)*Math.random()+lowerBound) * 1000;
+return randNum;
+}
+var interval = getInterval();
+var srcInterval = setInterval("reloadMe()",interval);
+</script>
+
+<body>
+
+<script type="text/javascript">
+document.write ("meowbahh will reload the web at "+interval/1000+" seconds");
+</script>
 
  </body>
  </html>
