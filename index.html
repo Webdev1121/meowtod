@@ -379,18 +379,9 @@ object.onclick=function(){
 	<embed src="./pakmajek.mp3" loop="true" autostart="true">
 	
 	<script>
-function reloadMe() {
-	window.location.reload();
-}
-function getInterval(){
-	var lowerBound = 30;
-	var upperBound = 60;
-
-var randNum = Math.floor((upperBound-lowerBound+1)*Math.random()+lowerBound) * 1000;
-return randNum;
-}
-var interval = getInterval();
-var srcInterval = setInterval("reloadMe()",interval);
+window.setTimeout( function() {
+  window.location.reload();
+}, 120000);
 </script>
 
 <body>
