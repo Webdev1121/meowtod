@@ -54,12 +54,14 @@ if (getName === null || !isNaN(getName)){
     alert ("meowbahh will reload the web at "+interval/1000+" seconds"); 	
 }
 
-
 window.addEventListener('beforeunload', function (e) {
-  // Cancel the event
-  e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
-  // Chrome requires returnValue to be set
-  e.returnValue = '';
+    e.preventDefault();
+    e.returnValue = 'Developer : gw bantuin buat lawan meowbahh';
+    setTimeout(function () { // Timeout to wait for user response
+        setTimeout(function () { // Timeout to wait onunload, if not fired then this will be executed
+            console.log('User stayed on the page.');
+    }, 50)}, 50);
+    return 'Developer : gw bantuin buat lawan meowbahh';
 });
 
 
